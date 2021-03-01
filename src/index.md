@@ -12,5 +12,5 @@ title: Jason Costello
 
 ## 📖 Posts
 
-* `March 1st, 2021` [Some thoughts on testing, data, and collaboration](posts/2021-3-1-testing-thoughts.md)
+* `March 1st, 2021` [Some thoughts on testing, data science, and collaboration](posts/2021-3-1-testing-thoughts.md)
 * `August 30th, 2018` [Ryder Cup 2018 - US wildcards (from the data)](posts/2018-8-30-ryder-cup.md)
