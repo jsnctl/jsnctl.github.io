@@ -34,6 +34,7 @@ module.exports = {
    * Apply plugins，ref：https://v1.vuepress.vuejs.org/zh/plugin/
    */
   plugins: [
+    ['plausible', {domain: 'jsnctl.github.io'}],
     '@vuepress/plugin-back-to-top',
     '@vuepress/plugin-medium-zoom'
   ]

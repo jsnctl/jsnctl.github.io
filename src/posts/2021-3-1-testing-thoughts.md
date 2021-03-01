@@ -118,7 +118,7 @@ for test_case in test_cases:
 
 # define snapshot of expected behavour    
 hypervector.Benchmark.new(
-    ensemble_uuid=ensemble_uuid, 
+    ensemble_uuid=ensemble.ensemble_uuid, 
     output=results
 )
 ```
