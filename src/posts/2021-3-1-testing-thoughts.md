@@ -1,3 +1,7 @@
+---
+permalink: 2021-3-1-testing-thoughts.html
+---
+
 # Some thoughts on testing, data science, and collaboration
 #### Mar 1, 2021
 
