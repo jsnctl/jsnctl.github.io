@@ -4,6 +4,7 @@ title: Jason Costello
 
 ## 🗞 News
 
+* `September 6th, 2021` Joined the team at [Synaptec](https://synapt.ec) to work on data & analytics in the power engineering instrumentation domain
 * `July 19th, 2021` Appeared on the [Data & Science Podcast with Glen Wright Colopy](https://youtu.be/cQeoI4Z52Dc) to talk about data science and engineering
 * `October 2nd, 2020` Began work on [Hypervector](https://hypervector.io) full-time
 * `April 10th, 2020` Re-joined [Current Health](https://currenthealth.com) to work on data engineering as the team looks to scale their vital signs monitoring device and platform
