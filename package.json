@@ -5,9 +5,9 @@
   "main": "index.js",
   "authors": {
     "name": "Jason Costello",
-    "email": "jason@hypervector.io"
+    "email": "jason@jsnc.tl"
   },
-  "repository": "/blog",
+  "repository": "jsnctl.github.io",
   "scripts": {
     "dev": "vuepress dev src",
     "build": "vuepress build src"

@@ -22,10 +22,6 @@ module.exports = {
       {
         text: 'About',
         link: '/about',
-      },
-      {
-        text: 'Hypervector',
-        link: 'https://hypervector.io'
       }
     ]
   },
