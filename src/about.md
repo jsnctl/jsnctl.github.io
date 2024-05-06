@@ -1,6 +1,6 @@
 # About
 
-<center><img src="meandmacallan.jpg" width="80%"></center>
+<center><img src="jsnctl.png" width="100%"></center>
 
 I'm a software engineer from Scotland. My interests include:
 
