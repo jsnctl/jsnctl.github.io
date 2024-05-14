@@ -4,6 +4,7 @@ title: Jason Costello
 
 ## 🗞 News
 
+* `May 14th, 2024` Joined [Cofide Security](https://cofide.io) to help build identity tooling in zero trust networking for cloud workloads
 * `November 21st, 2022` Joined [Hazy](https://hazy.com) as an engineer to work on synthetic data products
 * `September 6th, 2021` Joined the team at [Synaptec](https://synapt.ec) to work on data & analytics in the power engineering instrumentation domain
 * `July 19th, 2021` Appeared on the [Data & Science Podcast with Glen Wright Colopy](https://youtu.be/cQeoI4Z52Dc) to talk about data science and engineering
