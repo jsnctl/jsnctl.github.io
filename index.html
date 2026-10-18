@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Jason Costello</title>
+  <meta name="description" content="Software engineer from Scotland.">
+  <link rel="icon" href="/assets/img/jsnctl.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,600&display=swap">
+  <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="site-title" href="/">jsnc.tl</a>
+    <nav>
+      <a href="/" aria-current="page">Home</a>
+      <a href="/about.html">About</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="intro">
+      <img class="avatar" src="/assets/img/github-avatar.png" alt="">
+      <div>
+        <h1>Jason Costello</h1>
+        <p>Software engineer from Scotland, working on various things.<br> <a href="/about.html">More about me →</a></p>
+      </div>
+    </section>
+
+    <section class="tabbed">
+      <div class="tabs" role="tablist">
+        <button type="button" role="tab" id="tab-news" aria-controls="news" aria-selected="true">News</button>
+        <button type="button" role="tab" id="tab-posts" aria-controls="posts" aria-selected="false" tabindex="-1">Posts</button>
+      </div>
+
+      <ul class="dated" id="news" role="tabpanel" aria-labelledby="tab-news">
+        <li>
+          <time datetime="2026-05-19">May 2026</time>
+          <span>Joined the <a href="https://www.cisco.com/site/us/en/products/networking/data-center-networking/nexus-hyperfabric/index.html">Nexus Hyperfabric</a> team at Cisco Systems</span>
+        </li>
+        <li>
+          <time datetime="2024-05-14">May 2024</time>
+          <span>Joined <a href="https://cofide.io">Cofide Security</a> to help build identity tooling in zero trust networking for cloud workloads</span>
+        </li>
+        <li>
+          <time datetime="2022-11-21">Nov 2022</time>
+          <span>Joined <a href="https://hazy.com">Hazy</a> as an engineer to work on synthetic data products</span>
+        </li>
+        <li>
+          <time datetime="2021-09-06">Sep 2021</time>
+          <span>Joined the team at <a href="https://synapt.ec">Synaptec</a> to work on data &amp; analytics in the power engineering instrumentation domain</span>
+        </li>
+        <li>
+          <time datetime="2021-07-19">Jul 2021</time>
+          <span>Appeared on the <a href="https://youtu.be/cQeoI4Z52Dc">Data &amp; Science Podcast with Glen Wright Colopy</a> to talk about data science and engineering</span>
+        </li>
+        <li>
+          <time datetime="2020-10-02">Oct 2020</time>
+          <span>Began work on <a href="https://hypervector.io">Hypervector</a> full-time</span>
+        </li>
+        <li>
+          <time datetime="2020-04-10">Apr 2020</time>
+          <span>Re-joined <a href="https://currenthealth.com">Current Health</a> to work on data engineering as the team looks to scale their vital signs monitoring device and platform</span>
+        </li>
+        <li>
+          <time datetime="2019-04-01">Apr 2019</time>
+          <span>Joined the team at <a href="https://virtuoso.qa">SpotQA</a> as a Machine Learning Engineer</span>
+        </li>
+        <li>
+          <time datetime="2019-03-25">Mar 2019</time>
+          <span>Appeared on the <a href="https://www.unsungpod.net/episodes/episode-63-algorithm-n-blues-spotify-ai-and-the-decline-of-the-musician">Unsung Podcast</a> to talk about data &amp; ML in music</span>
+        </li>
+        <li>
+          <time datetime="2019-02-22">Feb 2019</time>
+          <span>Launched my github.io website</span>
+        </li>
+      </ul>
+
+      <ul class="dated" id="posts" role="tabpanel" aria-labelledby="tab-posts" hidden>
+        <li>
+          <time datetime="2021-03-01">Mar 2021</time>
+          <a href="/posts/2021-3-1-testing-thoughts.html">Some thoughts on testing, data science, and collaboration</a>
+        </li>
+        <li>
+          <time datetime="2018-08-30">Aug 2018</time>
+          <a href="/posts/2018-8-30-ryder-cup.html">Ryder Cup 2018 - US wildcards (from the data)</a>
+        </li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <nav>
+      <a href="https://github.com/jsnctl">GitHub</a>
+      <a href="mailto:jason@jsnc.tl">Email</a>
+    </nav>
+    <span>© 2026 Jason Costello</span>
+  </footer>
+
+  <script>
+    const tabs = [...document.querySelectorAll('[role="tab"]')];
+
+    function select(tab) {
+      for (const t of tabs) {
+        const on = t === tab;
+        t.setAttribute('aria-selected', on);
+        t.tabIndex = on ? 0 : -1;
+        document.getElementById(t.getAttribute('aria-controls')).hidden = !on;
+      }
+    }
+
+    for (const tab of tabs) {
+      tab.addEventListener('click', () => select(tab));
+      tab.addEventListener('keydown', (e) => {
+        const step = { ArrowRight: 1, ArrowLeft: -1 }[e.key];
+        if (!step) return;
+        const next = tabs[(tabs.indexOf(tab) + step + tabs.length) % tabs.length];
+        select(next);
+        next.focus();
+      });
+    }
+  </script>
+</body>
+</html>
