@@ -6,6 +6,9 @@
   <title>Some thoughts on testing, data science, and collaboration · Jason Costello</title>
   <meta name="description" content="Software engineer from Scotland.">
   <link rel="icon" href="/assets/img/jsnctl.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,600&display=swap">
   <link rel="stylesheet" href="/assets/css/style.css">
 </head>
 <body>
@@ -87,8 +90,9 @@
 
       <p>all via the API directly, or with the <code>hypervector-wrapper</code> Python package.</p>
 
-<pre><code># definition.json
-# Builds two dimensional feature vector of int and float types,
+      <figure class="code">
+        <figcaption>definition.json</figcaption>
+<pre><code># Builds two dimensional feature vector of int and float types,
 # distributed across cases as uniform and Gaussian dists respectively
 
 {
@@ -114,9 +118,11 @@
     }
   ]
 }</code></pre>
+      </figure>
 
-<pre><code># set_up.py
-# Run once to define test data and benchmark for fn_under_test
+      <figure class="code">
+        <figcaption>set_up.py</figcaption>
+<pre><code># Run once to define test data and benchmark for fn_under_test
 
 from data_service import fn_under_test
 import hypervector
@@ -145,9 +151,11 @@ hypervector.Benchmark.new(
     ensemble_uuid=ensemble.ensemble_uuid,
     output=results
 )</code></pre>
+      </figure>
 
-<pre><code># test_fn_under_test.py
-# Run as part of every subsequent test suite
+      <figure class="code">
+        <figcaption>test_fn_under_test.py</figcaption>
+<pre><code># Run as part of every subsequent test suite
 
 from data_service import fn_under_test
 import hypervector
@@ -164,6 +172,7 @@ for test_case in tests.hypervectors:
 # assert all 5k results are consistent with Benchmark
 benchmark_result = tests.benchmarks[0].assert_equal(results)
 assert benchmark_result.asserted is True</code></pre>
+      </figure>
 
       <p>I'm really keen to speak to any engineers or data scientists who are interested in this area, and who might want to be an early adopter for our forthcoming alpha programme. Please feel free to get in touch via <a href="mailto:hello@hypervector.io">hello@hypervector.io</a>, or ping me on Twitter <a href="https://twitter.com/jsnctl">@jsnctl</a></p>
     </article>
@@ -171,8 +180,11 @@ assert benchmark_result.asserted is True</code></pre>
   </main>
 
   <footer class="site-footer">
-    <a href="https://github.com/jsnctl">GitHub</a>
-    <a href="mailto:jason@jsnc.tl">Email</a>
+    <nav>
+      <a href="https://github.com/jsnctl">GitHub</a>
+      <a href="mailto:jason@jsnc.tl">Email</a>
+    </nav>
+    <span>© 2026 Jason Costello</span>
   </footer>
 </body>
 </html>
